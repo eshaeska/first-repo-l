@@ -1,104 +1,192 @@
+<!-- Сповіщуємо браузеру як варто обробити цю сторінку -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>my first repo</title>
-</head>
-<body>
-    <header>
-        <ul>
-            <li>
-               <button class="knopka">Lifestyle</button>
-            </li>
-            <li>
-                <button>photodiary</button>
-            </li>
-            <li>
-                <button>music</button>
-            </li>
-            <li>
-                <button>Travel</button>
-            </li>
-        </ul>
-    </header>
-    <main>
-        <!-- секция 1 -->
-        <section>
-            <ul>
-                <li>
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAwAMBEQACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAwIEBQEGB//EAEYQAAIBAwIDAwgIAggEBwAAAAECAwAEERIhBRMxQVFhBhQiMnGBkbEVYnKhwdHh8NLiIzNCQ1JzovE0Y5KydIKDhJOjwv/EABsBAAIDAQEBAAAAAAAAAAAAAAABAgMEBQYH/8QANBEAAQMCBAMFCAICAwAAAAAAAQACEQMSBCExQRNRYQUUcaHwFSJSgZGxwdHh8SNCBjIz/9oADAMBAAIRAxEAPwDwGivpcrz6NFEoRoolOV3RRKS5oolCNFEoXdFEoRoolCNFEoRoolCNFEoRoolCNFEoXNFEolGiiU5RoxRKSdbWc93Jy7aJpXxnCiqK+JpYdt9ZwaOqYBKdYWUsl8ItHpIctq6LjtPhWXGYpjsJxKbsjoR+OsafXZSaCTC2/oo3MRtYnaeXlpp39VjnO3Tpj8eteOr9qcF/GYLAXEGOkRnqesZbDpeGTkV3ikVpaidWljcemx5QC6SdtA7T2b+J2rguxteqA3PbXnznzV9NkleUuEheVRHKCp3B7cHBwfvFTa50GVppk0zqq7W8plkwCdt1z0H7+VTa5piTCuZiWt0GqasoldZZWJKgFs9o6D7sVYxmrZgQYVNQi5adtFzjEc6vQOXU+OB86mOLSuIOec+WfzCoeRoocuvp8rlo5dEoRy6JQjl0ShHLolCOXRKEcuiUI5dEoRy6JQjl0ShHLolCOXRKEcuiUI5dEoVyxsEuHIYucLk6ei+0/vqK5faPaLsLTD2x89/ABTa24wFsW0FpwuKOWAwyXDJqZpgGCfZ8eleQxPb1XFONOrLWae7kfnn+cvvaGFuYUrFpmlc2yRqGJMjrhBnoNh+FU4/EBzGio4ubtvl89ft15jQSClokdsrht5Zd2BPq4YYH4/Cs+J7Ve+mKVHIDKfHXyyJ+ikxmUlaFzxKGytZDaIkc04GQOuns3+HuNcmnSfVdaXSG76q8Ecl5PiUUcgKhcac6WDHoT3eyuvSovbTl+swPkM/wVO8DMKHDraILKzJk4ARR252/PNV42jUpAHb9DT6pF94XWj0yvNnDqQQwPqsfwrCHTkkyVVSMLESEG5AbI6Y3+Xyrq06QqU53b9tTKlxNimxRouNJdGDdAdwA36mtdPA1XMc5h94bHrv4R5qDqg3V7lV72VzJRyqJRKOVRKJRyqJRKOVRKJRyqJRKOVRKJRyqJRKOVRKJRyqJRKOVRKJRyqJRKOXRKJUorZ5XCxqSflVdWuyk255yTElaC2bJGqCcImcER7k95J+FeYxnadJrrzSvcdJ25QNfHxVzGk6FVeIebtojhlWNWA1FtyB3g9leZxTsQ53EqDPkMvXJbKVsJPFLm14WFgs1l1xjJdpTv44+Pz7Kw02vqZmIUmicyqFrxQNevPlsRpkaznLf7b+6rXUYbHNTNOGwn3N/A5j0Mxk0hjvnptpOPDJ+FW0wabSIEZ+e6g5mSvpy3BdiikeqxGVyP321qoY1lSta8e6YETsdf3HOFnLCMpU7Gxed3wiorIcZIVdzgewd1dbt00KWCZRpm4ggzvAB/jqq6bnXFZV6nInMLkkqxU6dwcdCPePlXmKUuAjdamNMZpsUOqOTcHLdvZXruysGys1wI1Az+hIPrQwdlme8tSZ9KYKeng42PQ93yqmpixhq8jNwO3XWfDRWNaXN6LX5XhXr7lz5RyvCi5Eo5XhRciVOO1llZVihd2Y4AVSc0jUaNSmAToFyS3eN2SRCjr1VhgigPBEhI5GCo8rwp3JSjlHuouTlHKPdRciUcrwouRKOV4UXIlHKPdRciUco91FyJRyvCi5EqQVlB0kjPXFVljXZuEoDoVuytEkDNNIEQIdOQMsR2CvP9rPLq3DpCXb9AZnwn+Sr6RgSSqPFBFKmtYio04Yd5/T8K5VTsTENmq92frP5fUlaGYhpgLO4lLA9uCWVextR9X0R+Oa4zqNSjVNN2oWljS4yNFK44NZfRcMqSq0kgP8ASKeuNj8P1qptepxIOikbmPgqpw2O3RlmmnhGN1XV99d7C4CjU/8AaoAN889FXXqu0a1a/m2FMYYqhXYKf3tmo0eym4jiOpOHukxv18enms/GLSJCdfcSt4OENZ2oZmLD08bn9/vvrn8GpSN9TecvKfGT475K0AOcvNm7ZpNUh1P0wTvWcMA0WmMlsQ2M8tnC4dIVn6GTOSMH0sdg2PwreztcUKDqDAZOv4APifksjqYm45qzNw+1tJmhCM2SSHL74wMe/Oon3Cq+zmvxUWEB3KIO+hj7dckPflIyWhyq+hSuXK6sOTjYeJouRK2OH8Gh5oa6ZZIyuQqE7n21lq4l0Q3VaGUxPvZr1nC4kgdEi9GMeoB2Vy6zi6SdVup+7kFpXfC7DicLx3dvG7Y9FyvpKe8GszK1Wk6WFXOpsqCHBeV4j5BzRI7WFz5wwAKxOgVm78HOPlXTpdqtJAqNgLFUwJAlhleSEQIyOnWurK58o5VEpyjlUpRKOVRKJRyqcolHKolEo5VEoldWAswCjJJwBUXVA0FztAjUp5ti8Bd2AiijJZh0TfPvPZjxryGKx9SlXe2j7pJk8z+hlr0jdbKdMEAlYPGkikMir6ccjkocEZ26kd2cbeNcFtavVIlxJH4j9Fb6VNoE6LzlxagAlV0lhkgHGAf391X3FphyvFS3QqdkZzE1lpGgjdm2CjPUfvriovLAb0OJf7x1W3w6PggKws4aUH1pBscdQK00sP3lpaH2nYc/n60WWo9wzIyV68g5ZDqSB6qkDcbezvoGDxeDeMyD6/SrvZUyWPdF/S5uxGQD0yR4fd/tTqY2rXEv/XrNW06YbospZFQG4GlSuyDvNZrCPdKv1yV2y43MLyN5Dq0RlOvZ1GPh09lVvwwDC1BblktSZiLR+aCXcKRv/azk1npOcHgsMQs7GCSF6jleFfT7lxJU4YRzV1AdehFRcckwc1u2ce2ANqxVCtbCty3V4BG3o6cdhBrG4h0ha2m2CrsdzqOpR7qpLFaKivJcLIqNjBWqCwgq68FfPOLcGmj4pLFbRa9eqVEjGdKZOK7tDEt4QLjGy41ai4VCGid1mvbshw6Mp+suK1B4OhWcyNQo8o91O5KUco91FyJRyj3UXIlHKPdRciUcrwouRK6IyNxsew91VVYcADp+kwVycu8Kx7LFHknx7/kK8v3OrXpvrvME/v8Av6rY2qGw0LJntWljYohUFgG6ZO+Me4Y+FZaGHZxLW8/3lyWg1jCz+IcPWIGPGysNwOu1Z8XQdSknWfLL+FKnUD3LNsogbxMk8vHdnA3x+NVUHtFRpfmFodJBAWtf2cNsBcNbLpJxpIzp8Pbt99aMbTq8S5rC0T+B6+qqpPltpMqvLKGfEzaRy8alOcH9kGsZq1SyCZnmrBTaFm5aHm43LBhueg8B3kmrPhHr0FIaLStVtBwuLz149eNUaNvp/M9du331PEYipUHBaMhv+Pr61SdRcHEq5cWfDZ7Z82Z1xYMmkkMud+vacYNcwVKrSCHa+v2qQ5zCFk2zMsgjFw3LQ/0bhM+IJ6+I99dTDPYDcfdKnUk6L6HyvCvd3LgSmW6ATJ0xmovOSbTmtONwPRQYHbWYjcrUHq1zWUrjfHjVVoKt4isc8HdRpz2VXYrOImJMRvk1EtUg9WPOA69ADgAntPdVdkFT4kqjxS0a/tdKAa4zqTP3jNX0agpPkqmsw1GZLB+ib3DHzSYhepCE1u7xS+ILDwanwlVuVVsqqUcrwolCOV4UXIlHK8KLkSjlUickSotCNBHxrPXZdRLAY/Sm10OBS7eIlNwAOvTtO9YezKWtU6HT7qyq/K1Vbqx592RpJUx5PceuxqGKwvGrubGUftTpVbGhywuGQQwcRgguVBMjFC2NtQ6CvO4GmDjGtqaBdN1zsO57dlf4tL5zcC0iBdU3Yr01YODnwODXoMdim1H8IejH43WHD0y1t/r0Vmz8LuyCY0WRsB8Ku+ojCjf35ri1GuBeSMh69eC3MqNgdVtR+RtsttHNxq+lK4OY4ABoGenjv865lXGXAlg6+h6yVjXFq8xxfhtlKY5+GmYFCVaOR9WMbbH4fEd1FLEVGy1+ivYalTPVXfJ5zPEYGkVZUcM2TjVnoM9+Qx76b6V7gBpy8FViKYpxO6dHYut2YUiUM7A+4dQPAnOa2Ds2sSKep/PXwWZ9WmWFy+sxWdm0McrrE7LtqZdsd2K9K6pUBICztZStBMJbw2b3GoRJnA2xtt4CpA1A2JUDwy6YVu3isF1YhUsw9Y749lVPNXmr2cEbLnEgvmiCIJhW7F9Kij/3zSrkWC1ZHpZAG/srZksVysxxSBgGRtzjpVZcIVoulakPLhjaMDUretkdorI6XGVraWtELkNwEBVNgc9BvUnMlDasZJkcrhtSkjf41BzQpNedkXNlbXMObiIMw6N0I99JlR7D7pTqU2PEuC89xqyitrleSNKumrSOg7K6OGque03bLmYqm1jxbuFzh/Bbi/jMkTRqgOMtnrTq4plIwUqGFfWEt0S/oqbz0WiNE8naVbIHtp94bZfsocB/E4YhKks3DssatLoJBZFJFTFUESclF1NwJAzhKEDP6CoxJ7MU3kFpBKrGuS5ydOxGDUaTW02BjdAm4knNHKqyUli8S4Kt1cqIhoDBmJ7m7Pl99edxnZ5qYn/HkTnPVdPCYzhNl2mh8ErgBgaWa0uohHfITlXG7LjqPd8609mlhFlQf5BrPhH2Rjqb2AVGGWHQrbKIofRhXx1xt/v1rnf8hxttLgU99fXryVOFZLrisvygvObbhDISAuRvvggj4dmPb24Neaw1Nz64E5fYrpNzFx2XguJu5n1RM6atQcdPS36d+2K6xpMpw0Lo4Wq53gq0IaNgPTCPgZBxk9hB7N6eTXSdvks5LqhM6r2Pk5eAcStIuPSmLmR+hcsnTcgas+wjNdTD4sseDV1I9SsFXDh+TcgvoKTOkehQMV3CwEyVyhVcBAUAxxTgKIeVYgE7sBHGxPwqt9oGZVrHVDoE+3kumkOVIC9nTeq3imBKtpvqlxRNKwOWiBycAKB1HfSa0HQpvqEahWrObUNLFdz0bYVXUZGiupVbsiu3tqY05kOrc+rnI9xpU6kmCpVqZaLmqEUMnKd23I2CrvUnPE5KDGOgkqEryRyFCQpXszmm0NIlIvc0wrEV1qTTKrsB2gGq3U85arWV5EOUbq2N8jaYlLgYDkY0juFNj+EdckqjOODAzUbbTY2yhGZhgljjp+VN54rpKTDwWZKxFcwooW2j6nJCLVZpuObirG12DJgT1kWOPkxFU9E4OOhNVlsm4q0VA0WtySEtIrcSlJHM8qkNIxx7wKsNRz4kZBVik1gMHM7rz7WUw1ExnY4z310BVbzXJNKpuFL6PlEasxRSc4UnBpcZswnwHxJSWtzGd8e45qbXAqtzS3VZnFeDQcQaOUloriJgUmQ4b2Vzu0aDXMNVph40I+y2YPGvozTIlp2/IVG4u5UmmTiEJgjUEpMAcY07knsPrdK8zXFQU2sxAzO/M5x9/PTJbxQpmHUTPTksxWNzzUjWOVVlJjCnAlzvoH2gPy3G8sJ/jxDiN9frt5qYabLTlCd5VcBFrDbuiFpp4slc4wACzs3QDAC+GT7q6FZmR6q7Dm1zemq8jwyx8/uUtGcKzNpUncA7+/O34Vlpg1DHNXVSKNQkrbtoDdpNwTiSGPitoTyyzbzKF2jHiDgjwJqxrASWO1H40CjiWwwVGaFe68/vl6Wi/wDyfy16y2nzXk+MB/SWOJXi5As1659f+Wiymd0CsBopHil8djbf/Yf4aXDp8/JS487lB4vxHVnzUkjt5p/ho4VLn5J94PMqacd4iNzagnOd5iP/AM1E0KXPyU24uN5UTxu97bCJt8/15/hp8Cn8Xl/KRxQ3U18o+JqN7NAo6Ay7D/TSOGoc/X1UxjnDfySZPKK+L5a0XX2kStv/AKakMPSA18lF2KkzJ9fNQj47eelpsl3O+ZiPwpmjT+JQFcDcqcvHeISAk2CMT1bnn8qi2hSbo7yUnYkO1lQPG74hVWxQbY2uD/DT4VOc3eSjx2xAJQ/G+J6NAswVPUC4P8NMUaUyT5I7xlEn6KK8d4oN/MgP/cfy0+DRO/kl3iNCVyTygvyPSso89h5+/wD20CjS5+SDiQd1E+UXENs2EbEdpuD/AA0+70/i8kd5CH8pOJMAPMYwB3T4x/ppjDUhv5fymcVdlPklNx29b0jYxFu83P8ALUuDTH+3l/KrNVpzKh9PXPbYR5/8T/LUuCz4vL+UuIxRPH7jIPmCbf8AP6/6apq4VlRzQXZKTazANUubjk88ZSThUUiHYo03X3aak/BUakBxn5J08SGOua6CvMyQTtxCRLCOSyKksFWUkL026fjXnx2Yx+Ic1ht1z29aeoXaGPaymKj81bvOJeUUlpNHfzR3kbKFMhRQ+Mg4Ow2qWKweLpMkEOA+sJ08ZgqzvdJa5YlveC2uvOng2b1gWIxv346fI4rm0zwny9uq6VRveKYtdmMlt+UF/D5QyQ3Nu9tHfRAFZVuMFgNwDlRuOyuhiX4GsLmPteOYIH1zCzYeni8ObHi5p5Rl+fovq4toO11z+/Cn3lY/ZzfX9LotYM7Mvx/SjvKPZzfX9LhtYP8AGvx/SjvKPZrfX9KDWkXYy/v3VLvI5o9mhcNrF2lT7/0o7z1S9nKBtIv8A+NHeeqPZqibROgQD2Zp966o9nDkoDhsbdF+Io731R7NHJT+jo1/s4PtH5Ud76o9nBDWERXopPeT+lHexzT9nBQXh8Q6lc/VY0d76pezQpDh9uf7Y97n8qO99U/ZrUfRsGfWT/qNPvfVL2a1B4fBjHMT3b0d7R7NCS/Crc/3iZp986pezAo/RUA/vV+Jp98S9moHC7fqGX9+6n3zqj2Yg8MtsdVPvP5U++nml7LXF4VA/QOB4Cmcb1SHZaZ9EW4wDqx47VHvvVS9lhJi4DbRTySRpvIRn2j3+NRGJaCXA5lTPZxcANgpTcDWeJ0Ma7qcamOM03YsOaQSoN7MIIIXmuFeRElzYXdvxEaHWZlhkAIK9PSA6Y8Kxg03ssetzKdWnUvZ8+qxL3h7eTp838pODpd2R2S+gBBA8SMfA4Piahe0e7VaHDnur3Uqk3UnlvTUL7IZGLaedGcfW3rk3nmunaOSg0nLY82fY1C93NStHJNSeJh6EiH2ipCp1USw8lE3K6tK6Wb6q/nQKhOhQWBBlOMurL7UH50GoRrKYYCpCRSmpMN7RineYyKVvRGzDOgZ+xRc5FoXRGD60a48UxTl26MkYjXoiH2IDSvhFsoOCDiIA9mUo4jkWhLCn+0i49mPwqN7lKGruqPvUDwANHEjdFvRdBjIwiF/FlwPlUr+SjbzUNHpbiD2AAn5UXO5ogclLT0BVcfZ/Slc5OGqWNP+HfwzRc4bogJZjV/WCv8AVaMH50g53NBA5JJsLV2/pLKAj6yL+tT4j+aVreSVNwfhLjewsFfxgQ/gKfFqbOP1KQY3klfQ3CmID8LsW8fNx+VHHqj/AGPmnw2bBKuPJjgcvXhlkP8A0wvyIp95rbP80uGzdqpSeRHk9Ls9mF36R3Ui/I0xjKw/2SNGmdkN5B+TgH/CXB+zezn5NUzjKw38goigxSPkVwQIUW1uSh6q97Ng+4vUe9VTy+gTFFnolaKJCDlriX2xyMT/ANtYwBuVqN3JMSGFzlZrzPfj8SKlDZylL3k5bKIAZubjP1pP0p2tjVRudOiDFEucbsOjBjmo5aSpZlLDXQPokY8QT86iC/ZMtZunRRu39Ykf/SfyqYaTqokjZPAaMYjRl+yFH41MAjT8KBhROOrsQfrgUj4phIntmm2M7AdyLSsnNOYS04VbA5ZZi3eXP507PFFysIkMGwMg8CxpSG80Q5yYLmEdZKYqMUbHJct0r7K0RH15cUF8/wBphhCi8rhfRhkYf8or880hKlAlV/O5lyPNLke181E/NOPBPglWQZLzRn6+Rim0jmouHRcnYsPRuSfvpOn4k2gclWDSqdwhH1h+VQDuamWpmbmQgRi2A/zSfuNT8FHLdNWPSmWWDX9XSM0xO8JHpKYqZ6ug8ABmi0FElLlt4JD/AEodvtdPhmla0Jy5ShgtITmNUU+ANMFg3SN66zRZJMsmPqnHyFMlvNINdyVLncOTcKWP1VJ+dRIpqyHlS88hx6MbKPELUS5uw+ydh3KBeQdGCD7Q/KgOG4QWkaJi3doPWmiHsjNTlnoKJD0w8Rsox/X59manewKFjilnjFswxGSW7M1E1RspCkd1Fp5LpQA80f8AlYx+dK8uUrA1QXhxLamnc/bFLhzulfGyc/nEK4imVvCl77NCmA12oVeQXMpyz3R+qrqopy46ohoVaTz5NlQBe+SVSRSLSpSFxTeHqI/c6/nUbUwUxYpJTiSMk96kHFK0pyFZj4ftkEg/ZxUhTcqy5qmYruP+qaiyoESxKdb4kF2cjuBoPE3TFmymJLpVxGrZ8TQL0ENOqUzcQLZaQjwUCmTUQGsUtNy3ryT+7aokvThiEimB2WQjvaSmA5HuqxHHJ2qfeAfwphruSiS3mp6ZO1GA9wp2u3CJCmCV6hve9Sz2UIlJmeRjhZFjHgMmoElTa0KhHHcdln79VQscdlZLRumBATiZFjH+atSDOaV3JBi4cPXuYx/5galw281G53wqvJJwhP7bufqKaRazmpC/kki64eD/AEdjI/2sCj3U4erUV5GRiO15XsANRLhsi3mp8yZvVL48TioyU7QlSLM3U0k4C7FARu76ffQkngDGI2Dt3FqYEpKIiuyfQCLUg1yRLUzze77ZgPYoqVr0rmqLxXKbtc6vA1Ehw1TFp2SWuNG0hFRkqVoSpOIxKh5eC3gKaLUhZriVsrNIM9zUXEJ2hWFW+G6yyH35p3OSIanxy8QXdlEg8V3qQe9QLWq2l1Jj07aRT4EGpiodwoWDmuSzgr/w7sfECoucDspNaQdVnPDdSOSMRDuWoAKzLddFrdJ6Svq9u9Frk5auG4uIfXhU/GlPNESo/Ssg/uEX25NO7olZO6//2Q==" alt="photodiary">
-                </li>
-                <li>
-                    <p class="text1s1">Lifestyle</p> 
-                </li>
-                <li>
-                    <h2 class="zags1">More than just a music festival</h2>
-                </li>
-                <li>
-                    <p class="text2s1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, officia!</p>
-                </li>
-            </ul>
-        </section>
-        <!-- секция два -->
-        <section>
-            <ul>
-                <li>
-                    <img src="https://thumbs.dreamstime.com/b/%D1%83%D1%8E%D1%82%D0%BD%D0%BE%D0%B5-%D0%BC%D1%8F%D0%B3%D0%BA%D0%BE%D0%B5-%D1%81%D0%B5%D1%80%D0%BE%D0%B5-%D0%BE%D0%B4%D0%B5%D1%8F%D0%BB%D0%BE-%D1%81-%D1%87%D0%B0%D1%88%D0%BA%D0%BE%D0%B9-%D0%BA%D0%BE%D1%84%D0%B5-100418201.jpg" alt="photo">
-                </li>
-                <li>
-                    <p class="text1s2">LIFESTYLE</p>
-                </li>
-                <li>
-                    <h2 class="zag1s2">Life tastes better with coffee</h2>
-                </li>
-                <li>
-                    <p class="text2s2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum a perferendis facere hic sed cumque.</p>
-                </li>
-            </ul>
-        </section>
-        <!-- секция 3 -->
-        <section>
-            <ul>
-                <li>
-                    <img src="data:image/jpeg;base64,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" alt="photo">
-                </li>
-                <li>
-                    <p class="text1s3">PHOTODAIRY</p>
-                </li>
-                <li>
-                    <p class="text2s3">American dream</p>
-                </li>
-                <li>
-                    <p class="text3s3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro doloremque natus veniam ipsa facilis explicabo, velit esse eaque id odit.</p>
-                </li>
-            </ul>
-        </section>
-        <!-- секция 4 -->
-        <section>
-            <ul>
-                <li>
-                    <img src="https://img.freepik.com/premium-photo/man-stands-back-to-the-camera-on-the-ocean-shore-and-admires-the-nature_330878-727.jpg?w=2000" alt="photo">
-                </li>
-                <li>
-                    <p class="text1s4">PHOTODAIRY</p>
-                </li>
-                <li>
-                    <p class="text2s4">A day exploring the Alps</p> 
-                </li>
-                <li>
-                    <p class="text3s4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-            <button class="foot">load more</button>
-    </footer>
-</body>
+<!-- Оболонка документа, вказуємо мову змісту -->
+<html lang="ua">
+  <!-- Заголовок сторінки, контейнер для інших важливих  даних (не відображається) -->
+  <head>
+    <!-- Заголовок сторінки в браузері -->
+    <title>2D/3D Трансформації. CSS властивість transform</title>
+    <!-- Підключаємо CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Кодування сторінки -->
+    <meta charset="UTF-8"  />
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="stylesheet" href="./css/common.css" /> -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <!-- Тіло сторінки -->
+  <body>
+    <a href="./index.html">Назад на головну</a> <br />
+    <!-- Оболонка для демонстрації -->
+    <div class="wrapper">
+      <!-- Контент -->
+      <div class="content">
+        <h1>CSS Transform</h1>
+        <div class="content__2D">
+          <section class="content__block">
+            <h2>translate (x, y)</h2>
+            <div class="content__translate">translate</div>
+            <p>
+              <strong>translate</strong> - зсуває елемент на нове місце,
+              переміщуючи щодо початкового положення об'єкта вправо та вниз,
+              використовуючи координати X и Y. Записується так translate (x,y);
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>scale (x, y)</h2>
+            <div class="content__scale">scale</div>
+            <p>
+              <strong>scale</strong> - масштабує елементи, роблячи їх більше чи
+              менше. За замовчуванням значення вказані як одиниця (1) – це
+              реальний обсяг об'єкта. Перше значення масштабує елемент за
+              ширині, друге - за висотою. Негативні значення відображають
+              елемент дзеркальний.
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>rotate (вугол+deg)</h2>
+            <div class="content__rotate">rotate</div>
+            <p>
+              <strong>rotate</strong> - повертає елементи на задане кількість
+              градусів, негативні значення повертають елемент проти годинникової
+              стрілки, позитивні - за годинниковою стрілкою. Записуються
+              значення як градус повороту та deg
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>skew (x-вугол+deg, y-вугол+deg)</h2>
+            <div class="content__skew">skew</div>
+            <p>
+              <strong>skew</strong> - деформує (спотворює) сторони об'єкта щодо
+              координатних осей. Якщо вказано одне значення, друге буде
+              визначено браузером автоматично. Записуються значення як градус
+              повороту та deg
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>matrix (a, c, b, d, x, y)</h2>
+            <div class="content__matrix">matrix</div>
+            <p>
+              <strong>matrix(a, c, b, d, x, y)</strong> - дозволяє об'єднати
+              кілька функцій 2D-трансформацій в одній. В якості трансформації
+              допустимі поворот, масштабування, нахил (деформація) та зміна
+              положення. Властивості вказуються без одиниць виміру.
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>Множинні 2D трансформації</h2>
+            <div class="content__multi">
+              translate <br />
+              scale <br />
+              rotate
+            </div>
+            <p>
+              Так само, подібного можна домогтися використовуючи множинні
+              трансформації. А саме записати кілька значень в одне властивість
+              перетворення.
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>transform-origin</h2>
+            <div class="content__transform-origin">transform origin</div>
+            <p>
+              <strong>transform-origin</strong> - дозволяє змістити центр
+              трансформації, щодо якої відбувається зміна
+              положення/розміру/форми елемента
+            </p>
+          </section>
+        </div>
+        <div class="content__3D">
+          <section class="content__block">
+            <h2>perspective, perspective-origin</h2>
+            <div class="content__wrapper3d">
+              <div class="content__perspective">
+                perspective, perspective-origin
+              </div>
+            </div>
+            <p>
+              <strong>perspective, perspective-origin</strong> - встановлення
+              глибини та зміна точки початку координат
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>translate3d (x, y, z)</h2>
+            <div class="content__wrapper3d">
+              <div class="content__translate3D">translate3D</div>
+            </div>
+            <p>
+              <strong>translate3D</strong> - за аналогією зі своїм 2D братом це
+              значення задає переміщення елемента, проте, в 3D-просторі. Крім
+              осі X та Y додається вісь Z.
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>scale3d (x, y, z)</h2>
+            <div class="content__wrapper3d">
+              <div class="content__scale3D">scale3D</div>
+            </div>
+            <p>
+              <strong>scale3D</strong> - задает трехмерное масштабирование по
+              одной из осей X, Y, Z
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>rotate3d (x, y, z, deg)</h2>
+            <div class="content__wrapper3d">
+              <div class="content__rotate3d">rotate3d</div>
+            </div>
+            <p>
+              <strong>rotate3d</strong> - вращает элемент относительно трех
+              осей. Элемент поворачивается под углом, задаваемым последним
+              параметром относительно вектора направления X, Y, Z
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>matrix3d (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</h2>
+            <div class="content__wrapper3d">
+              <div class="content__matrix3d">matrix3d</div>
+            </div>
+            <p>
+              <strong>matrix3d</strong> - задає тривимірне перетворення як
+              однорідну матрицю розміром 4×4 з шістнадцятьма значеннями стовпцях
+            </p>
+          </section>
+          <section class="content__block">
+            <h2>Множинні 3D трансформації</h2>
+            <div class="content__wrapper3d">
+              <div class="content__multi3d">
+                translate3d <br />
+                rotate3d
+              </div>
+            </div>
+            <p>Запис кількох 3D значень одна властивість transform.</p>
+          </section>
+          <section class="content__block">
+            <h2>transform-style</h2>
+            <div class="content__transform-style-wrapper">
+              <div class="content__transform-style">
+                transform <br />
+                style
+              </div>
+            </div>
+            <p><strong>transform-style</strong> - задає стиль трансформації</p>
+          </section>
+          <section class="content__block">
+            <h2>Backface-visibility</h2>
+            <div class="flip">
+              <div class="flip__body">
+                <div class="flip__front">FONT</div>
+                <div class="flip__back">BACK</div>
+              </div>
+            </div>
+            <p>
+              Властивість визначає, чи буде видно користувачу зворотний бік
+              елемент.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
