@@ -1,39 +1,11 @@
-.header{
-  background-image: url(./images/pattern.jpeg);
-  text-align: center;
+body{
+  background-image: url(./images/finnish.jpeg);
+  background-position: center;
+  background-size: 100%;
 }
-.header__title{
-  font-family: Helvetica;
-  font-size: 100px;
-  font-weight: bold;
-  color: khaki;
-  display: inline-block;
-  color:chocolate;
-}
-
-a{
-  font-family: Helvecita;
-  font-weight: bold;
-  color: blue;
-}
-.Brushes{
-  font-family: Helvecita;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background-color: mediumspringgreen;
-}
-.Frames{
-  font-family: Helvecita;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background-color: lightcoral;
-}
-.Paint{
-  font-family: Helvecita;
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  background-color: skyblue;
+footer{
+  margin-top: 10px;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
 }
